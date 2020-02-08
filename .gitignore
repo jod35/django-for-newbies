@@ -1,4 +1,2 @@
-__pycache__
-Pipfile.lock
-Pipfile
-.vscode
+.vscode/
+.*pyc
