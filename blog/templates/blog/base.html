@@ -13,7 +13,10 @@
 
   </head>
   <body>
-    <a href="{% url 'blog_home'%}"><h1>Django Blog</h1></a>
+    <header>
+      <a href="{% url 'blog_home'%}"><h1>Django Blog</h1></a>
+      <a href="{% url 'blog_new'%}"><small>New Blog Post</small></a>
+    </header>
     {% block body%}
     {% endblock body%}
 
