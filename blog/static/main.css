@@ -7,3 +7,11 @@ header a{
   color: white;
   font-weight: bolder;
 }
+
+.jumbotron h1{
+  color:coral;
+}
+
+.jumbotron small{
+  color: coral;
+}

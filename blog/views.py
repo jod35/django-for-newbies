@@ -1,10 +1,18 @@
 from django.shortcuts import render
 from .models import Post,User
-from django.views.generic import ListView,DetailView,CreateView
+from .forms import PostForm
 
-# Create your views here.
-class BlogListView(ListView):
-    model=Post
-    template_name='index.html'
 
-class BlogDetailView(ListView):
+def home(request):
+    posts=Post.objects.all()
+    context={
+    'posts':posts
+    }
+    return render(request,'blog/index.html',context)
+
+def create_post(request):
+    form=PostForm()
+    context={
+    'form':form
+    }
+    return render(request,'blog/new_post.html',context)
