@@ -1,8 +1,10 @@
 {% extends 'blog/base.html'%}
 {%block body%}
      {%for post in posts%}
-       <h1>{{post.title}} by {{post.author}}</h1>
-       <small>posted on {{post.date_posted}}</small>
-       <p>{{post.content}}</p>
+       <div class="jumbotron">
+         <h1>{{post.title}} by {{post.author}}</h1>
+         <small>posted on {{post.date_posted}}</small>
+         <p>{{post.content}}</p>
+       </div>
      {%endfor%}
 {% endblock body%}

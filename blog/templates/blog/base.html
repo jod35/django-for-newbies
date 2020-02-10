@@ -13,12 +13,14 @@
 
   </head>
   <body>
-    <header>
-      <a href="{% url 'blog_home'%}"><h1>Django Blog</h1></a>
-      <a href="{% url 'blog_new'%}"><small>New Blog Post</small></a>
+    <header class="nav navbar navbar-dark">
+      <a href="{% url 'blog_home'%}"><h1 class="">Django Blog</h1></a>
+      <a href="{% url 'blog_new'%}"><span class="badge bg-info">+</span>New Blog Post</a>
     </header>
-    {% block body%}
-    {% endblock body%}
+    <div class="container">
+      {% block body%}
+      {% endblock body%}
+    </div>
 
   </body>
 </html>
