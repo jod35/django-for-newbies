@@ -12,7 +12,10 @@ def home(request):
 
 def create_post(request):
     form=PostForm()
+    users=User.objects.all()
     context={
-    'form':form
+    'form':form,
+    'users':users
+
     }
     return render(request,'blog/new_post.html',context)
